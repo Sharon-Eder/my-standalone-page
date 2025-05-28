@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///Users/user/Downloads/suppliers_guide_english%20(2).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Little Guide - Interior Design Suppliers</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #f0ede8 0%, #e8e2db 100%);
+            min-height: 100vh;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 980px;
+            margin: 40px auto;
+            background: #faf9f7;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(139, 118, 102, 0.08);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #faf9f7 0%, #f5f3f0 100%);
+            color: #8b7666;
+            padding: 48px 32px 32px;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid rgba(139, 118, 102, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 8px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #1a1a1a;
+            text-transform: uppercase;
+        }
+        
+        .header p {
+            font-size: 17px;
+            color: #a89080;
+            font-weight: 300;
+            line-height: 1.4;
+            margin-top: 8px;
+        }
+        
+        .search-container {
+            padding: 24px 32px;
+            background: #f5f3f0;
+            border-bottom: 1px solid rgba(139, 118, 102, 0.1);
+        }
+        
+        .search-box {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 17px;
+            border: 1px solid rgba(139, 118, 102, 0.2);
+            border-radius: 10px;
+            outline: none;
+            transition: all 0.2s ease;
+            text-align: left;
+            background: #faf9f7;
+            font-weight: 400;
+        }
+        
+        .search-box:focus {
+            border-color: #8b7666;
+            box-shadow: 0 0 0 4px rgba(139, 118, 102, 0.1);
+        }
+        
+        .categories {
+            display: flex;
+            gap: 8px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .category-btn {
+            padding: 8px 16px;
+            background: #faf9f7;
+            border: 1px solid rgba(139, 118, 102, 0.2);
+            color: #8b7666;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-weight: 400;
+            font-size: 15px;
+        }
+        
+        .category-btn:hover, .category-btn.active {
+            background: #8b7666;
+            color: #faf9f7;
+            border-color: #8b7666;
+        }
+        
+        .suppliers-grid {
+            padding: 32px;
+            background: #faf9f7;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
+        }
+        
+        .supplier-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(139, 118, 102, 0.06);
+            transition: all 0.2s ease;
+            border: 1px solid rgba(139, 118, 102, 0.08);
+        }
+        
+        .supplier-card:hover {
+            box-shadow: 0 4px 16px rgba(139, 118, 102, 0.12);
+            transform: translateY(-2px);
+        }
+        
+        .supplier-name {
+            font-size: 21px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+        
+        .supplier-category {
+            background: rgba(139, 118, 102, 0.1);
+            color: #8b7666;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 13px;
+            display: inline-block;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        
+        .supplier-contact {
+            color: #a89080;
+            margin-bottom: 16px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        
+        .coupon-code {
+            background: none;
+            color: #8b7666;
+            padding: 0;
+            border-radius: 0;
+            font-size: 13px;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .coupon-text {
+            font-size: 13px;
+            color: #8b7666;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .supplier-link {
+            display: inline-block;
+            background: #8b7666;
+            color: #faf9f7;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+            font-size: 15px;
+        }
+        
+        .supplier-link:hover {
+            background: #756352;
+            transform: translateY(-1px);
+        }
+        
+        .footer {
+            background: #f5f3f0;
+            color: #1a1a1a;
+            padding: 24px 32px;
+            text-align: center;
+            border-top: 1px solid rgba(139, 118, 102, 0.1);
+        }
+        
+        .footer p {
+            font-size: 17px;
+            margin-bottom: 4px;
+            font-weight: 400;
+        }
+        
+        .footer small {
+            color: #a89080;
+            font-weight: 300;
+            font-size: 15px;
+        }
+        
+        .add-supplier {
+            margin-top: 24px;
+            padding: 16px;
+            background: rgba(139, 118, 102, 0.05);
+            border-radius: 12px;
+            text-align: center;
+            border: 2px dashed rgba(139, 118, 102, 0.2);
+        }
+        
+        .add-supplier h3 {
+            font-size: 19px;
+            font-weight: 500;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+        
+        .add-supplier p {
+            font-size: 15px;
+            color: #a89080;
+            margin-bottom: 16px;
+        }
+        
+        .add-btn {
+            background: #8b7666;
+            color: #faf9f7;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .add-btn:hover {
+            background: #756352;
+        }
+        
+        .supplier-form {
+            display: none;
+            margin-top: 16px;
+            padding: 16px;
+            background: #faf9f7;
+            border-radius: 10px;
+            border: 1px solid rgba(139, 118, 102, 0.2);
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .form-input {
+            flex: 1;
+            padding: 10px 12px;
+            border: 1px solid rgba(139, 118, 102, 0.2);
+            border-radius: 8px;
+            font-size: 15px;
+            background: #ffffff;
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: 8px;
+            justify-content: flex-end;
+        }
+        
+        .save-btn, .cancel-btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .save-btn {
+            background: #8b7666;
+            color: #faf9f7;
+        }
+        
+        .cancel-btn {
+            background: rgba(139, 118, 102, 0.1);
+            color: #8b7666;
+        }
+        
+        @media (max-width: 768px) {
+            .suppliers-grid {
+                grid-template-columns: 1fr;
+                padding: 20px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <div style="font-size: 24px; font-weight: 500; color: #8b7666; letter-spacing: 2px; margin-bottom: 4px;">
+                    SPHERA
+                </div>
+                <div style="font-size: 12px; font-weight: 300; color: #a89080; letter-spacing: 3px; margin-bottom: 20px;">
+                    Creating Your Space
+                </div>
+                <div style="width: 60px; height: 1px; background: #1a1a1a; margin: 0 auto;"></div>
+            </div>
+            <h1>My Curated Guide</h1>
+            <p>Suppliers I genuinely enjoyed working with on this project —<br>
+            my personal selection of partners who made all the difference!</p>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" class="search-box" placeholder="Search supplier or category..." id="searchInput">
+            <div class="categories">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="Furniture">Furniture</button>
+                <button class="category-btn" data-category="Lighting">Lighting</button>
+                <button class="category-btn" data-category="Curtains">Curtains</button>
+                <button class="category-btn" data-category="Accessories">Accessories</button>
+                <button class="category-btn" data-category="Art">Art</button>
+                <button class="category-btn" data-category="Books">Books</button>
+            </div>
+        </div>
+        
+        <div class="suppliers-grid" id="suppliersGrid"><div class="supplier-card">
+                    <div class="supplier-name">Floralis</div>
+                    <div class="supplier-category">Furniture</div>
+                    <div class="supplier-contact">
+                        📞 Contact: Lilach
+                    </div>
+                    
+                    
+                    <a href="https://www.floralis.co.il/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">SpaceIt</div>
+                    <div class="supplier-category">Furniture</div>
+                    <div class="supplier-contact">
+                        📞 Contact: Meital
+                    </div>
+                    
+                    
+                    <a href="https://spaceit.co.il/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">SI Lighting</div>
+                    <div class="supplier-category">Lighting</div>
+                    <div class="supplier-contact">
+                        📞 Contact: Chaim
+                    </div>
+                    
+                    
+                    <a href="https://silighting.net/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">Europe Decor</div>
+                    <div class="supplier-category">Curtains</div>
+                    <div class="supplier-contact">
+                        📞 Contact: Korin
+                    </div>
+                    <div class="coupon-text">🎁 10% special discount for SPHERA clients</div>
+                    
+                    <a href="https://www.instagram.com/europedecor_curtains" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">Studio Reish</div>
+                    <div class="supplier-category">Accessories</div>
+                    <div class="supplier-contact">
+                        📞 Contact: Racheli
+                    </div>
+                    <div class="coupon-text">Special discount for SPHERA clients</div>
+                                     <div class="coupon-code">🎁 Use code: SPHERA15</div>
+                    
+                    <a href="https://reish.co/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">No Land</div>
+                    <div class="supplier-category">Accessories (Cushions)</div>
+                    <div class="supplier-contact">
+                        
+                    </div>
+                    
+                    
+                    <a href="https://www.nolandhome.co.il/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">Collectie</div>
+                    <div class="supplier-category">Accessories (Cement Wall Clock)</div>
+                    <div class="supplier-contact">
+                        
+                    </div>
+                    <div class="coupon-text">Special discount for SPHERA clients</div>
+                                     <div class="coupon-code">🎁 Use code: SHARONEDER5</div>
+                    
+                    <a href="https://www.collectie.co.il/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">Soho</div>
+                    <div class="supplier-category">Kitchen Accessories</div>
+                    <div class="supplier-contact">
+                        
+                    </div>
+                    
+                    
+                    <a href="https://www.sohocenter.co.il/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">Glory Vase</div>
+                    <div class="supplier-category">Accessories (Hydroponic Bouquets)</div>
+                    <div class="supplier-contact">
+                        
+                    </div>
+                    <div class="coupon-text">10% discount for first purchase on website</div>
+                                     <div class="coupon-code">🎁 Use code: SPHERA@NESPRESSO</div>
+                    
+                    <a href="https://www.gloryreplant.com/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">Gitta</div>
+                    <div class="supplier-category">Accessories</div>
+                    <div class="supplier-contact">
+                        📞 Contact: Orit
+                    </div>
+                    <div class="coupon-text">Special discount for SPHERA clients</div>
+                                     <div class="coupon-code">🎁 Use code: SPHERA</div>
+                    
+                    <a href="https://https//www.instagram.com/gitahome/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">Recycle by Ossi</div>
+                    <div class="supplier-category">Art</div>
+                    <div class="supplier-contact">
+                        📞 Contact: Ossi
+                    </div>
+                    
+                    
+                    <a href="https://www.instagram.com/ossyprihadash" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">Always Never</div>
+                    <div class="supplier-category">Art</div>
+                    <div class="supplier-contact">
+                        📞 Contact: Noa &amp; Andrey
+                    </div>
+                    
+                    
+                    <a href="https://www.instagram.com/always____never" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">HaMigdalor</div>
+                    <div class="supplier-category">Books</div>
+                    <div class="supplier-contact">
+                        
+                    </div>
+                    
+                    
+                    <a href="https://hamigdalor.co.il/" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div><div class="supplier-card">
+                    <div class="supplier-name">Yuval Buchshtab</div>
+                    <div class="supplier-category">Art</div>
+                    <div class="supplier-contact">
+                        
+                    </div>
+                    
+                    <div style="font-size: 12px; color: #a89080; font-style: italic; margin-bottom: 16px;">In memory of Yagev Buchshtab</div>
+                    <a href="https://www.instagram.com/yuval_buchshtab" target="_blank" class="supplier-link">🌐 Visit Supplier</a>
+                </div></div>
+        
+        <div class="footer">
+            <p>Thank you for the trust, it was a pleasure working together</p>
+            <small style="display: block; margin-bottom: 16px;">Crafted especially for you 🤍</small>
+            <div style="padding-top: 16px; border-top: 1px solid rgba(139, 118, 102, 0.2);">
+                <div style="font-size: 15px; color: #8b7666; font-weight: 500; margin-bottom: 8px;">
+                    Sphera - Creating Your Space
+                </div>
+                <div style="font-size: 14px; color: #a89080;">
+                    Sharon Eder | <a href="tel:0544848384" style="color: #8b7666; text-decoration: none; cursor: pointer;">0544848384</a> | <a href="mailto:sharon@sphera.co.il" style="color: #8b7666; text-decoration: none; cursor: pointer;">sharon@sphera.co.il</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const suppliers = [
+            {
+                name: "Floralis",
+                category: "Furniture",
+                contact: "Lilach",
+                website: "www.floralis.co.il",
+                description: "Flowers and plants for home"
+            },
+            {
+                name: "SpaceIt",
+                category: "Furniture",
+                contact: "Meital",
+                website: "spaceit.co.il",
+                description: "Smart home solutions"
+            },
+            {
+                name: "SI Lighting",
+                category: "Lighting",
+                contact: "Chaim",
+                website: "silighting.net",
+                description: "Professional lighting"
+            },
+            {
+                name: "Europe Decor",
+                category: "Curtains",
+                contact: "Korin",
+                website: "www.instagram.com/europedecor_curtains",
+                description: "Luxury curtains"
+            },
+            {
+                name: "Studio Reish",
+                category: "Accessories",
+                contact: "Racheli",
+                website: "reish.co",
+                description: "Professional design & marketing"
+            },
+            {
+                name: "No Land",
+                category: "Accessories (Cushions)",
+                contact: "-",
+                website: "www.nolandhome.co.il",
+                description: "Luxury decorative pillows"
+            },
+            {
+                name: "Collectie",
+                category: "Accessories (Cement Wall Clock)",
+                contact: "-",
+                website: "www.collectie.co.il/",
+                description: "Designer rugs"
+            },
+            {
+                name: "Soho",
+                category: "Kitchen Accessories",
+                contact: "-",
+                website: "www.sohocenter.co.il",
+                description: "Designer kitchen accessories"
+            },
+            {
+                name: "Glory Vase",
+                category: "Accessories (Hydroponic Bouquets)",
+                contact: "-",
+                website: "www.gloryreplant.com",
+                description: "Hydroponic plants"
+            },
+            {
+                name: "Gitta",
+                category: "Accessories",
+                contact: "Orit",
+                website: "https://www.instagram.com/gitahome/",
+                description: "Home accessories"
+            },
+            {
+                name: "Recycle by Ossi",
+                category: "Art",
+                contact: "Ossi",
+                website: "www.instagram.com/ossyprihadash",
+                description: "Capsule art"
+            },
+            {
+                name: "Always Never",
+                category: "Art",
+                contact: "Noa & Andrey",
+                website: "www.instagram.com/always____never",
+                description: "Wall paintings"
+            },
+            {
+                name: "HaMigdalor",
+                category: "Books",
+                contact: "-",
+                website: "hamigdalor.co.il",
+                description: "Curated bookstore"
+            },
+            {
+                name: "Yuval Buchshtab",
+                category: "Art",
+                contact: "-",
+                website: "www.instagram.com/yuval_buchshtab",
+                description: "In memory of Yagev Buchshtab"
+            }
+        ];
+
+        function renderSuppliers(suppliersToShow = suppliers) {
+            const grid = document.getElementById('suppliersGrid');
+            grid.innerHTML = '';
+            
+            // Define coupon codes
+            const couponCodes = {
+                'Gitta': 'SPHERA',
+                'Collectie': 'SHARONEDER5', 
+                'Studio Reish': 'SPHERA15',
+                'Glory Vase': 'SPHERA@NESPRESSO'
+            };
+            
+            // Define special discounts without codes
+            const specialDiscounts = {
+                'Europe Decor': '10% special discount for SPHERA clients'
+            };
+            
+            // Special memorial text
+            const memorialText = {
+                'Yuval Buchshtab': 'In memory of Yagev Buchshtab'
+            };
+            
+            suppliersToShow.forEach(supplier => {
+                const card = document.createElement('div');
+                card.className = 'supplier-card';
+                
+                const couponCode = couponCodes[supplier.name];
+                const specialDiscount = specialDiscounts[supplier.name];
+                let couponHTML = '';
+                
+                if (couponCode) {
+                    if (supplier.name === 'Glory Vase') {
+                        couponHTML = `<div class="coupon-text">10% discount for first purchase on website</div>
+                                     <div class="coupon-code">🎁 Use code: ${couponCode}</div>`;
+                    } else {
+                        couponHTML = `<div class="coupon-text">Special discount for SPHERA clients</div>
+                                     <div class="coupon-code">🎁 Use code: ${couponCode}</div>`;
+                    }
+                } else if (specialDiscount) {
+                    couponHTML = `<div class="coupon-text">🎁 ${specialDiscount}</div>`;
+                }
+                
+                const memorial = memorialText[supplier.name];
+                const memorialHTML = memorial ? 
+                    `<div style="font-size: 12px; color: #a89080; font-style: italic; margin-bottom: 16px;">${memorial}</div>` : '';
+                
+                card.innerHTML = `
+                    <div class="supplier-name">${supplier.name}</div>
+                    <div class="supplier-category">${supplier.category}</div>
+                    <div class="supplier-contact">
+                        ${supplier.contact && supplier.contact !== '-' ? `📞 Contact: ${supplier.contact}` : ''}
+                    </div>
+                    ${couponHTML}
+                    ${memorialHTML}
+                    ${supplier.website && supplier.website !== '-' ? 
+                        `<a href="https://${supplier.website}" target="_blank" class="supplier-link">🌐 Visit Supplier</a>` : ''}
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filtered = suppliers.filter(supplier => 
+                supplier.name.toLowerCase().includes(searchTerm) ||
+                supplier.category.toLowerCase().includes(searchTerm) ||
+                (supplier.contact && supplier.contact.toLowerCase().includes(searchTerm))
+            );
+            renderSuppliers(filtered);
+        });
+
+        // Category filters
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active button
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                const category = btn.getAttribute('data-category');
+                if (category === 'all') {
+                    renderSuppliers();
+                } else {
+                    const filtered = suppliers.filter(supplier => 
+                        supplier.category.includes(category)
+                    );
+                    renderSuppliers(filtered);
+                }
+            });
+        });
+
+        // Initial load
+        renderSuppliers();
+    </script>
+
+</body></html>
